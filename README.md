@@ -31,8 +31,3 @@ Option 2: Use a linear regression model to solve for Artist Followers.
 ### Cleaning the Dataset
 
 For segment 1 of our project, we took a random sample set consisting of 981 rows of data and then manually cleaned up our csv file in excel. We began by deleting any columns we felt were unnecessary for our analysis and rows that were missing data. Then, we took a look at columns that needed a change in data type. Specifically, we changed the 'Explicit' and 'Album/Single' columns from string columns to numerical values. In the 'Explicit' column, any __False__ values were assigned a numerical value of 1 while any __True__ values were assigned a numerical value of 0. Similarly, for the 'Album/Single' column, any __Album__ values were assigned a numerical value of 0 while any __Single__ values were assigned a numerical value of 1. 
-
-
-## Technology Used
-
-For our final project, we will be using a CSV file as our dataset. We will then be using Jupyter Notebook and Postgres SQL to analyze and store our data. And lastly, we will be using Tableau for our visualizations. 

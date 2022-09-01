@@ -10,21 +10,23 @@
 
 ### Communication Protocols 
 
-Communication between team members will be conducted via a groupchat on Slack and through email.
+Communication between team members will be conducted via a groupchat on Slack and through email. Majority of the communication will occur during class hours with additional time scheduled outside of class should the project require it. Communication outside of class hours will primarily occur within Slack, with Zoom meetings as a supplemental option.
 
 ## Project Overview
 
-### Reason for selecting dataset:
-This robust dataset provides insight into the daily 200 chart topping songs from 2017 - 2020.
+### Description of Datasource / Reason for selecting dataset:
 
-### Description of Datasource:
-This dataset is in the form of a CSV file and was retrieved from the Spotify API. 
+Our group has decided to analyze Spotify's Top Daily Songs from the years 2017 to 2020. The dataset we will be using is in the form of a CSV file and was retrieved from the Spotify API. It can be found through the link below:
+
+https://www.kaggle.com/datasets/pepepython/spotify-huge-database-daily-charts-over-3-years?select=Final+database.csv
+
+We chose this robust dataset becuase it provides extensive insight into the daily 200 chart topping songs with over 170,000 rows of data and columns containing both descriptive information and musical traits. 
 
 ### Questions we hope to answer:
 
-Option 1: Solve for genre using a Random Forest model.
-
-Option 2: Use a linear regression model to solve for Artist Followers.  
+The questions we hope to answer through our dataset include:
+* Predicting the genre of a song using a Random Forest Model
+* Solving for the number of Artist Followers using a linear regression model. 
 
 ## Database
 

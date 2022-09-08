@@ -59,7 +59,7 @@ Once our training and testing scores were established, we used the 'feature_impo
 
 ### Data Exploration
 
-During our data exploration phase, we decided to use the 'feature_importances' attribute as mentioned above. Our goal was to distinguish which faeture had the greatest impact on our results. We were surprised to see that Artist_followers was the most impactful when it came to predicting the Genre of a song as those two features are not typically thought to be directly related. 
+During our data exploration phase, we decided to use the 'feature_importances' attribute as mentioned above. Our goal was to distinguish which feature had the greatest impact on our results. We were surprised to see that Artist_followers was the most impactful when it came to predicting the Genre of a song as those two features are not typically thought to be directly related. 
 
 ### Training and Testing Sets
 
@@ -87,7 +87,7 @@ The second model we decided to use was a Linear Regression Model to solve for Ar
 
 ## Dashboard
 
-The final dashboard will be created using Tableau. 
+The final dashboard will be created using Tableau. We will use the interactive dashboard to describe music popularity within Spotify. Specifically, we will be displaying the Artist Popularity by Country, the Most Popular Artists, Genre Popularity, and lastly we will be ranking Artist Followers. 
 
 ## Presentation
 

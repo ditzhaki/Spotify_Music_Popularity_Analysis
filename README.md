@@ -43,7 +43,7 @@ The total amount of songs derived from the Spotify API is 170,633. The analysis 
 * Changed the values of the ‘Album/Single’ column from string to numerical values. Any Album values were assigned a numerical value of 0 and any Single values were assigned a numerical value of 1. 
 * Converted Release_Date to Release_Year to ensure each value in the column was consistent.
 
-The cleaning of the preliminary data was done via excel.
+The cleaning of the preliminary data was primarily done via excel with pandas used to drop null values.
 
 ### Database
 
@@ -61,7 +61,7 @@ The model we decided to use was a Random Forest Model to solve for the Genre of 
 
 However, with benefits come limitations. Those limitations are as follows:
 
-* Large numnber of trees can make the algorithm too slow and ineffective for real-time predictions.
+* Large number of trees can make the algorithm too slow and ineffective for real-time predictions.
 * Although fast to train, it is quite slow in creaitng predictions once trained.
 * Acts as a predictive modeling tool, not a descriptive tool. Therefore, it is not a good approach when looking for a description of the relationships in our data.
 
@@ -69,9 +69,11 @@ However, with benefits come limitations. Those limitations are as follows:
 
 For our random forest model, we assigned our y value to output the genre. We then set our X values to the following columns: artist_followers, popularity, tempo, duration_ms, danceability, energy, speechiness, acoustics, instrumentalness, valence, and liveliness. These features were decided based on multiple factors. During segment 1 of our project, we used a sample dataset that gave us the opportunity to review the effect each feature would have on our results. We found that this combination of features worked best as it also only contained columns that were similar in datatype, specifically all being numeric.
 
-Once our training and testing scores were established, we used the 'feature_importances_' attribute which allowed us to see which features have the most impact on the decision. The 3 most impactful features can be seen in the image below:
+Once our training and testing scores were established, we used the 'feature_importances_' attribute which allowed us to see which features have the most impact on the decision. The 3 most impactful features can be seen in the image below with artist followers taking the lead at 11.4%:
 
-<img width="988" alt="Screen Shot 2022-09-07 at 7 34 56 PM" src="https://user-images.githubusercontent.com/101564349/189001033-746383c6-9966-455d-8e33-14aae87a9a47.png">
+<img width="953" alt="Screen Shot 2022-09-14 at 7 53 33 PM" src="https://user-images.githubusercontent.com/101564349/190282879-3f460801-1a24-40dc-9888-469cc31b76a2.png">
+
+<img width="187" alt="Screen Shot 2022-09-14 at 7 58 21 PM" src="https://user-images.githubusercontent.com/101564349/190283014-202f0bd3-ecfa-4ec3-9a0f-3e3ddeb2add8.png">
 
 ### Data Exploration
 
@@ -81,22 +83,28 @@ During our data exploration phase, we decided to use the 'feature_importances' a
 
 The next step in our analysis included splitting our dataset into two: training and testing sets. In supervised learning, the model uses the training dataset to learn from it and then uses the testing dataset to assess its performance. In our case, we specified a random state of 1 which ensures that the same rows are assigned to train and test sets, respectively. We then scaled our training and testing variables and fit a random forest classifier to the data to obtain an output of:
 
-<img width="248" alt="Screen Shot 2022-09-07 at 7 37 42 PM" src="https://user-images.githubusercontent.com/101564349/189001254-f49d6184-91c1-472f-9ba8-1f834c757948.png">
+<img width="238" alt="Screen Shot 2022-09-14 at 7 43 01 PM" src="https://user-images.githubusercontent.com/101564349/190281545-3183f98f-9445-46ec-86d7-afbff1982d60.png">
 
 ### Current Accuracy Score
 
-Our current accuracy score is...
+Our current accuracy score is approximately 69% and was calculated using the balanced_accuracy_score feature. 
+
+<img width="303" alt="Screen Shot 2022-09-14 at 7 43 33 PM" src="https://user-images.githubusercontent.com/101564349/190281581-ce5cf007-eb32-42a7-ab4d-e7f415298248.png">
+
+In addition, we ran a classification report which yielded the following values shown below. These results reveal that our precision for prediction of each genre are relatively in line with eachother. The precisions generally range from 1.00 to 0.97 with a few outliers (hip hop, opm, other, and pop) dropping to 0.89 - 0.84. However, the recall (sensitivity) for predicting the genres are a bit more scatterd. The sensitivity for predicting the boy band genre appears be the highest at 0.95, with the lowest sensitivity reflected in the jazz genre. The lower recall values are reflected in dropped F1 scores as well with Jazz coming in the lowest at 0.26. 
+
+<img width="422" alt="Screen Shot 2022-09-14 at 8 05 33 PM" src="https://user-images.githubusercontent.com/101564349/190283668-36b8ed6d-b381-4076-a032-76e2bd640836.png">
 
 ### Changes Made / Additional Training
 
 Initially, one of our goals was to be able to determine the popularity of a song by using a Linear Regression Model. Unfortunately, our results prodcuced scores under 2% and therefore, we found it to be ineffective. For this reason, we decided to change our approach to simply using a Random Forest Model to predict Genre and eliminate any Linear Regression analysis from our code. 
 
-For our analysis, we felt we did not have to do any additional training because we achieved satisfactory results on our Random Forest Model the first time.
+For our analysis, we included a couple of changes to improve our testing score. First, we altered the inputs for our X value to only include relevant columns and dropped any that had no value to our results. We also used the get_dummies() function from the Pandas library to convert categorical variables into dummy/indicator variables as a method of encoding. Encoding the data makes it usable for building machine learning models and is a part of the preprocessing stage. With these changes, we found that our testing score went from 88% to 88.7%
 
 ___
 ## Dashboard
 
-The final dashboard will be created using Tableau. We will use the interactive dashboard to describe music popularity within Spotify. Specifically, we will be displaying the Artist Popularity by Country, the Most Popular Artists, Genre Popularity, and lastly we will be ranking Artist Followers. 
+The final dashboard was created using Tableau. We used the interactive dashboard to describe music popularity within Spotify. Specifically, we displayed the Artist Popularity by Country, the Most Popular Artists, Genre Popularity, and lastly the ranking of Artist Followers. Our [Tableau Dashboard can be viewed here](). 
 
 ___
 ## Presentation
@@ -106,7 +114,7 @@ Our google slides can be found [here](https://docs.google.com/presentation/d/1vg
 ___
 ## Technology Used
 
-**Data Cleaning and Analysis**: Pandas is used to clean the data and perform an exploratory analysis.
+**Data Cleaning and Analysis**: Pandas, in addition to python, is used to clean the data and perform an exploratory analysis.
 
 **Database Storage**: Postgres is the database we intend to use for storage. We have used pgAdmin as an open source management tool to perform database administration.
 

@@ -104,7 +104,7 @@ For our analysis, we included a couple of changes to improve our testing score. 
 ___
 ## Dashboard
 
-The final dashboard was created using Tableau. We used the interactive dashboard to describe music popularity within Spotify. Specifically, we displayed the Artist Popularity by Country, the Most Popular Artists, Genre Popularity, and lastly the ranking of Artist Followers. Our [Tableau Dashboard can be viewed here](). 
+The final dashboard was created using Tableau. We used the interactive dashboard to describe music popularity within Spotify. Specifically, we displayed the Artist Popularity by Country, the Most Popular Artists, Genre Popularity, and lastly the ranking of Artist Followers. Our [Tableau Dashboard can be viewed here](https://public.tableau.com/app/profile/jordan.plank/viz/20_FinalProjectDashboard_SpotifyMusicAnalysisDashboard/SpotifyAnalysisMusicPopularity). 
 
 ___
 ## Presentation

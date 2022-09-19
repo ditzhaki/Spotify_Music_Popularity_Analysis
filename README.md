@@ -91,7 +91,7 @@ Our current accuracy score is approximately 69% and was calculated using the bal
 
 <img width="303" alt="Screen Shot 2022-09-14 at 7 43 33 PM" src="https://user-images.githubusercontent.com/101564349/190281581-ce5cf007-eb32-42a7-ab4d-e7f415298248.png">
 
-In addition, we ran a classification report which yielded the following values shown below. These results reveal that our precision for prediction of each genre are relatively in line with eachother. The precisions generally range from 1.00 to 0.97 with a few outliers (hip hop, opm, other, and pop) dropping to 0.89 - 0.84. However, the recall (sensitivity) for predicting the genres are a bit more scatterd. The sensitivity for predicting the boy band genre appears be the highest at 0.95, with the lowest sensitivity reflected in the jazz genre. The lower recall values are reflected in dropped F1 scores as well with Jazz coming in the lowest at 0.26. 
+In addition, we ran a classification report which yielded the following values shown below. These results reveal that our precision for prediction of each genre are relatively in line with each other. The precisions generally range from 1.00 to 0.97 with a few outliers (hip hop, opm, other, and pop) dropping to 0.89 - 0.84. However, the recall (sensitivity) for predicting the genres are a bit more scattered. The sensitivity for predicting the boy band genre appears be the highest at 0.95, with the lowest sensitivity reflected in the jazz genre. The lower recall values are reflected in dropped F1 scores as well with Jazz coming in the lowest at 0.26. 
 
 <img width="422" alt="Screen Shot 2022-09-14 at 8 05 33 PM" src="https://user-images.githubusercontent.com/101564349/190283668-36b8ed6d-b381-4076-a032-76e2bd640836.png">
 
@@ -121,3 +121,7 @@ ___
 **Machine Learning**: SciKitLearn is the ML library we used to create a classifier. Our training and testing setup is split into X_train, X_test, y_train, and y_test variables.
 
 **Dashboard**: We used Tableau for a fully functioning and interactive dashboard.
+
+## Recommendations for Future Analysis
+
+For any future analysis, we recommend using a linear regression model to explore the popularity of a song. In addition, we we believe it would be great for any future analysis to include using machine learning to develop music recommendations for users. 

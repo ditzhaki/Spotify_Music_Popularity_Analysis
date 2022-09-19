@@ -122,6 +122,10 @@ ___
 
 **Dashboard**: We used Tableau for a fully functioning and interactive dashboard.
 
-## Recommendations for Future Analysis
+## Recommendations for Future Analysis / Anything We Would Do Differently
 
-For any future analysis, we recommend using a linear regression model to explore the popularity of a song. In addition, we we believe it would be great for any future analysis to include using machine learning to develop music recommendations for users. 
+For any future analysis, we recommend using a linear regression model to explore the popularity of a song. This is something we were hoping to explore, however, were unable to due to time restraints. With more time, this is something we would have liked to analyze successfully. 
+
+In addition, we we believe it would be great for any future analysis to include using machine learning to develop music recommendations for users. 
+
+

@@ -1,0 +1,12 @@
+Requirements.txt
+
+sqlalchemy
+pandas
+matplotlib
+sklearn.datasets
+numpy
+sklearn.ensemble
+sklearn.model_selection
+sklearn.preprocessing
+sklearn.metrics
+imblearn.metrics
